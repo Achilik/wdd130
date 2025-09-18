@@ -1,0 +1,98 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #055a05; /* Forest green */
+  --secondary-color: #f4a261; /* Warm sand */
+  --accent1-color: #264653; /* Dark slate blue */
+  --accent2-color: #e9c46a; /* Light golden yellow */
+  --heading-font: "Roboto", sans-serif;
+  --body-font: "Lato", sans-serif;
+}
+
+/* Universal selector to reset box-model properties */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Document body styling */
+
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+}
+
+/* Limit and center page width for header, main, and footer */
+header, main, footer {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+/* Heading styling */
+h1, h2{
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  padding: 8px;
+}
+
+/* Consistent spacing for navigation, paragraphs, sections, and articles */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* Remove underlines from social media image links */
+.socialmedia a {
+  text-decoration: none;
+}
+
+/* Hero Div with Overlays */
+.hero {
+  position: relative;
+   /* Ensure content doesn't spill out */
+}
+
+/* Style the image within the hero div */
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Position the h1 heading over the image */
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.8;
+  background-color: var(--accent1-color);
+  color: #fff; /* White text for contrast */
+}
+
+/* Style the article using absolute positioning */
+.hero article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Style the image inside the article */
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
