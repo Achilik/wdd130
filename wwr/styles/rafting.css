@@ -28,57 +28,80 @@ body {
 
 
 main {
-    max-width: 1200px;
+    max-width: 1250px;
     margin: 0 auto;
     padding: 2rem;
 }
 
 header {
-  display: grid;
+  display: flex;
   grid-template-columns: auto 1fr;
   align-items: center;
-  padding: 1rem 2rem;
   background-color: #f0f0f0;
+  padding: 20px 0;
+  justify-content: space-between;
 }
 
 header img {
-  height: 60px;
+  height: 150px;
   width: auto;
+  padding-left: 50px;
+  filter: drop-shadow(.75em .75em .3em);
+
 }
 
-header nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1.2em;
-    padding-left: 2rem;
+nav li {
+  float: left;
+  filter: drop-shadow(.75em .75em .5em);
+
 }
 
 header nav a {
-    text-decoration: none;
-    color: #333;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease;
+text-decoration: none;
+color: #ffffff;
+padding-left: 40px;
+padding-right: 40px;
+padding-bottom: 10px;
+padding-top: 10px;
+border: 1px solid #4a148c;
+border-radius: 5px;
+transition: background-color 0.3s, color 0.3s;
+display: block;
+text-align: center;
+background-color: #364736;
+list-style-type: none;
+margin: 50px;
+overflow: hidden;
+box-shadow: .75em .75em 1em;
 }
 
 header nav a:hover {
-  background-color: #ddd;
-  border-radius: 5px;
+  background-color: #415f5a;
+  color: #fff;
 }
 
 /* Heading styling */
-h1, h2{
+h2{
   font-family: var(--heading-font);
   color: var(--primary-color);
   padding: 8px;
 }
 
+h1 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  padding: 2px;
+}
 /* Consistent spacing for navigation, paragraphs, sections, and articles */
-nav, p, section, article {
+nav, p, section {
   margin: 16px;
   padding: 8px;
 }
 
+article {
+    margin: 16px;
+  padding: 2px;
+}
 /* Remove underlines from social media image links */
 .socialmedia a {
   text-decoration: none;
@@ -97,29 +120,23 @@ nav, p, section, article {
   display: block;
   width: 100%;
   height: auto;
+  filter: drop-shadow(.75em .75em .5em);
+
 }
 
 
 /* Position the h1 heading over the image */
-/*.hero h1 {
+.hero h1 {
   position: absolute;
+  font-size: 4em;
   top: 20px;
   width: 100%;
-  padding: 16px;
+  padding: 30px;
   text-align: center;
-  opacity: 0.8;
+  opacity: 0.9;
   background-color: var(--accent1-color);
-  color: #fff; /* White text for contrast 
-}*/
-
-.hero h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 4em;
-    text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px #000000;
+  color: #fff; /* White text for contrast*/
 }
 
 /* Style the article using absolute positioning */
@@ -147,83 +164,138 @@ nav, p, section, article {
   width: 125px;
   margin-left: 12px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  filter: drop-shadow(.75em .75em .5em);
+
 }
 
-.history {
+ .history {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-    margin-top: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-right: 30px;
+    padding-left: 70px;
+    background-color: #bdd8d4;
+    filter: drop-shadow(.75em .75em .5em);
 }
 
 .history h2 {
+    grid-column: 1 / -1; /* For Grid: span all columns */
     text-align: center;
+    font-size: 3em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #0c3126;
 }
 
-.adventures h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.adventure-gallery {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.adventure-gallery figure {
-    flex: 1 1 18%; /* Allows items to grow, shrink, and have a base width */
-    margin: 0;
-    text-align: center;
-}
-
-.adventure-gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.adventure-gallery figcaption {
-    margin-top: 0.5rem;
-    font-style: italic;
+.history-text {
+   line-height: 1.6;
     color: #555;
+    width: 200px;
+  
 }
 
-/* Footer Styles */
+.history-image {
+    padding-right: 40px;
 
-/* Limit and center page width for header, main, and footer */
-/*footer {
-  max-width: 840px;
-  margin: 0 auto;
-}*/
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+}
+
+.adventure-section {
+    width: 100%; /* Adjust as needed */
+    max-width: 1300px; /* Max width for larger screens */
+    margin: 20px auto; /* Center the section */
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.adventure-section h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.image-gallery {
+    display: flex; /* Enable Flexbox */
+    justify-content: space-around; /* Distribute items with space between */
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    gap: 5px; /* Space between figures */
+}
+
+.image-gallery figure {
+    margin: 0; /* Reset default margin */
+    padding: 30px;
+    border: 1px solid #ddd;
     background-color: #f0f0f0;
+    width: 200px; /* Fixed width for each figure */
+    flex-shrink: 0; /* Prevent figures from shrinking */
+    box-sizing: border-box; /* Include padding and border in the width */
+    display: flex; /* Make figure a flex container for image and caption */
+    flex-direction: column; /* Stack image and caption vertically */
+    justify-content: space-between; /* Push caption to the bottom */
+    align-items: center; /* Center content horizontally */
+    height: 225px;
 }
 
-footer p {
-    margin: 0;
+.image-gallery img {
+    width: 200px; /* Placeholder image size */
+    height: 200px; /* Placeholder image size */
+    background-color: #e0e0e0; /* Placeholder background */
+    display: block; /* Remove extra space below image */
+    margin-bottom: 10px;
+    box-shadow: .75em .75em 1em;
+    /* You can replace this with an actual image, e.g., border-radius: 50%; for circular images */
 }
 
-footer a {
-    text-decoration: none;
-    color: #333;
-    margin: 0 1rem;
+.image-gallery figcaption {
+    font-size: 0.9em;
+    color: #000000;
+    text-align: center;
 }
 
-.social-links {
-    display: flex;
-    gap: 1rem;
+.site-footer {
+  width: 100%;
+  max-width: 1260px;
+  background-color: #092c23; /* Light purple color from the image */
+  border-radius: 12px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #b7bdbb;
+  display: flex;
+  gap: 15px;
 }
 
-.social-links img {
-    height: 30px;
-    width: auto;
+.site-footer p {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.social-icon-box{
+  padding: 3px;
+  border: 2px solid #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-width: 5px;
+}
+
+/* Basic responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .image-gallery figure {
+        width: calc(50% - 20px); /* Two figures per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery figure {
+        width: 100%; /* One figure per row on very small screens */
+    }
 }
