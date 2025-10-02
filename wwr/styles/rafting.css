@@ -259,7 +259,7 @@ article {
 .site-footer {
   width: 100%;
   max-width: 1260px;
-  background-color: #092c23; /* Light purple color from the image */
+  background-color: #2f3936; /* Light purple color from the image */
   border-radius: 12px;
   padding: 10px 20px;
   display: flex;
@@ -273,19 +273,22 @@ article {
 
 .site-footer p {
     color: #ffffff;
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 100;
 }
 
 .social-icon-box{
-  padding: 3px;
-  border: 2px solid #fdfdfd;
+  padding: 5px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   border-width: 5px;
+  margin: 5px;
+ 
+
 }
+
 
 /* Basic responsiveness for smaller screens */
 @media (max-width: 768px) {
@@ -304,6 +307,12 @@ main {
     padding: 20px;
     max-width: 1200px; /* or whatever width you use */
     margin: 0 auto;
+}
+
+main h1 {
+  background-color: #294529;
+  padding-left: 450px;
+  color: white;
 }
 
 /* Grid for the Company Info and Map section (Top row in wireframe) */
