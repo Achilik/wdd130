@@ -124,19 +124,20 @@ article {
 }
 
 /* Style the article using absolute positioning */
-.hero article {
+.hero h4 {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 80%;
   transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 600px;
+  width: 50%;
+  max-width: 200px;
   background-color: #e7d8c4;
-  padding: 24px;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   color: rgb(43, 43, 26);
+  height: 570px;
 }
 
 .hero article h2 {
