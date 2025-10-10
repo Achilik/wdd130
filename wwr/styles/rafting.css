@@ -56,14 +56,6 @@
             color: var(--color-accent-teal);
         }
 
-main {
-    max-width: 1250px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-
-
 /* Heading styling */
 h2{
   font-family: var(--heading-font);
@@ -673,6 +665,9 @@ article {
             
             .footer-links, .social-media {
                 margin-top: 10px;
+            }
+            main {
+                width: 900px;
             }
         }
 
