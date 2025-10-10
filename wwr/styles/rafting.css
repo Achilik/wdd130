@@ -124,7 +124,7 @@ article {
 }
 
 /* Style the article using absolute positioning */
-.hero h4 {
+.hero div {
   position: absolute;
   top: 60%;
   left: 80%;
