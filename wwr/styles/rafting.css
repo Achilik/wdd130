@@ -1,15 +1,14 @@
 /* CSS Variables based on the image's color palette */
-  :root {
-            --color-dark-slate: #485d56; /* Header, Footer, Text Box background */
-            --color-light-khaki: #e7d8c4; /* Section background */
-            --color-primary-text: #000;
-            --color-secondary-text: #fff;
-            --color-accent-teal: #02779e; /* Logo/Accent */
-            --color-cta-button: #cc6633; /* Book Now button */
-            --font-display: 'Georgia', serif;
-            --font-body: 'Arial', sans-serif;
-        }
-
+      :root {
+    --color-dark-slate: #485d56; /* Header, Footer, Text Box background */
+    --color-light-khaki: #e7d8c4; /* Section background */
+    --color-primary-text: #000;
+    --color-secondary-text: #fff;
+    --color-accent-teal: #02779e; /* Logo/Accent */
+    --color-cta-button: #cc6633; /* Book Now button */
+    --font-display: 'Georgia', serif;
+    --font-body: 'Arial', sans-serif;
+      }
         /* Base Styles */
         body {
             font-family: var(--font-body);
@@ -56,45 +55,29 @@
             color: var(--color-accent-teal);
         }
 
+
+
+
+
+/* ABOUT PAGE*/
+
 /* Heading styling */
-h2{
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-  padding: 8px;
-}
-
-h1 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-  padding: 2px;
-}
-/* Consistent spacing for navigation, paragraphs, sections, and articles */
-nav, p, section {
-  margin: 16px;
-  padding: 8px;
-}
-
-article {
-    margin: 16px;
-  padding: 2px;
-}
 
 /* Hero Div with Overlays */
 .hero {
   position: relative;
   text-align: center;
   margin-bottom: 2rem;
+  overflow: hidden;
    /* Ensure content doesn't spill out */
 }
-
 /* Style the image within the hero div */
 .hero img {
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
-
-
 /* Position the h1 heading over the image */
 .hero h1 {
   position: absolute;
@@ -108,7 +91,6 @@ article {
   text-shadow: 2px 2px 4px #000000;
   color: #fff; /* White text for contrast*/
 }
-
 /* Style the article using absolute positioning */
 .hero div {
   position: absolute;
@@ -125,21 +107,6 @@ article {
   color: rgb(43, 43, 26);
   height: 570px;
 }
-
-.hero article h2 {
-  margin-top: 0;
-}
-
-/* Style the image inside the article */
-.hero article img {
-  float: right;
-  width: 900px;
-  margin-left: 12px;
-  border-radius: 8px;
-  filter: drop-shadow(.75em .75em .5em);
-
-}
-
  .history {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -152,7 +119,6 @@ article {
     background-color: #bdd8d4;
     filter: drop-shadow(.75em .75em .5em);
 }
-
 .history h2 {
     grid-column: 1 / -1; /* For Grid: span all columns */
     text-align: center;
@@ -162,19 +128,14 @@ article {
     font-weight: bold;
     color: #0c3126;
 }
-
 .history-text {
    line-height: 1.6;
     color: #555;
     width: 200px;
-  
 }
-
 .history-image {
     padding-right: 40px;
-
 }
-
 .adventure-section {
     width: 100%; /* Adjust as needed */
     max-width: 80%; /* Max width for larger screens */
@@ -184,19 +145,16 @@ article {
     background-color: #e7d8c4;
     text-align: center;
 }
-
 .adventure-section h1 {
     font-size: 2em;
     margin-bottom: 30px;
 }
-
 .image-gallery {
     display: flex; /* Enable Flexbox */
     justify-content: space-around; /* Distribute items with space between */
     flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
     gap: 5px; /* Space between figures */
 }
-
 .image-gallery figure {
     margin: 0; /* Reset default margin */
     padding: 30px;
@@ -221,12 +179,18 @@ article {
     box-shadow: .75em .75em 1em;
     /* You can replace this with an actual image, e.g., border-radius: 50%; for circular images */
 }
-
 .image-gallery figcaption {
     font-size: 0.9em;
     color: #000000;
     text-align: center;
 }
+
+
+
+
+
+/* CONTACTS PAGE*/
+
 /* Grid for the Company Info and Map section (Top row in wireframe) */
 .contact-info-map-grid {
     display: grid;
@@ -236,7 +200,6 @@ article {
     margin-bottom: 40px;
     align-items: start;
 }
-
 /* Styling for the embedded Google Map */
 .map-container {
     padding: 10px;
@@ -249,7 +212,6 @@ article {
     /* REMOVE the default inline style="border:0" and define it here if needed */
     border: 5px solid var(--primary-color); /* Example border */ 
 }
-
 /* 4. Contact Form Section Styling */
 .contact-form-section {
     max-width: 600px; /* Keep the form readable */
@@ -259,7 +221,6 @@ article {
     border-radius: 8px;
     background-color: #f9f9f9;
 }
-
 /* General form styling for fieldsets and inputs */
 .contact-form fieldset {
     margin-bottom: 20px;
@@ -290,7 +251,6 @@ article {
     border-radius: 4px;
     box-sizing: border-box; /* Ensures padding doesn't widen the elements */
 }
-
 /* Specific styling for radio and checkbox groups */
 .radio-group label,
 .checkbox-group label {
@@ -298,25 +258,24 @@ article {
     margin-left: 5px;
     width: auto;
 }
-
 /* Submission Button Styling (ensure it's distinguishable) */
 .submit-button {
     display: block;
     width: 100%;
     padding: 15px;
     background-color: var(--accent-color); /* Use a bold, distinguishing color */
-    color: white;
+    color: var(--color-light-khaki);
     font-size: 1.1em;
     font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    background-color: var(--color-dark-slate);;
 }
 .submit-button:hover {
     background-color: var(--hover-color); /* Define a hover color */
 }
-
 /* Employee Profiles Section Styling */
 .employee-profiles {
     margin-bottom: 40px;
@@ -351,9 +310,11 @@ article {
     color: var(--accent-color);
 }
 
-/* Trips CSS*/
 
 
+
+
+/* TRIPS PAGE */
 
 /* Hero */
 .hero1 {
@@ -377,16 +338,13 @@ article {
   font-size: 4rem;
   font-weight: 800;
   text-shadow: 0 3px 10px rgba(0,0,0,0.7);
-
 }
-
 /* Trips Section */
 .trips {
   text-align: center;
   padding: 3rem 1rem;
   background-color: #f8faff;
 }
-
 .trips h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -400,7 +358,6 @@ article {
   max-width: 1100px;
   margin: 0 auto;
 }
-
 .trip-card {
   background: white;
   border-radius: 10px;
@@ -408,29 +365,24 @@ article {
   overflow: hidden;
   transition: transform 0.3s ease;
 }
-
 .trip-card:hover {
   transform: translateY(-5px);
 }
-
 .trip-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
-
 .trip-card h3 {
   font-size: 1.2rem;
   margin-top: 1rem;
   color: var(--color-dark-slate);
 }
-
 .trip-card p {
   font-size: 0.95rem;
   color: #555;
   margin: 0.5rem 1rem 1.5rem;
 }
-
 .trip-card button {
   background-color: var(--color-dark-slate);
   color: #fff;
@@ -441,7 +393,6 @@ article {
   cursor: pointer;
   transition: background 0.3s ease;
 }
-
 .trip-card button:hover {
   background-color: #fdb813;
   color: #0b1d36;
@@ -449,237 +400,175 @@ article {
 
 
 
-/* Home CSS*/
 
+/* HOME PAGE */
 
+/* Hero Section --- */
 
-     
+#hero_o {
+    position: relative;
+    width: 100%;
+    height: 60%; /* Fixed height for visual consistency */
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#hero_o img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(80%); /* Darkens the image for better text contrast */
+}
+.hero-content_o {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-secondary-text);
+    z-index: 10;
+}
+.hero-content_o h1 {
+    font-size: 4em;
+    margin: 0 0 10px 0;
+    /* Font style matching the image's script font is approximated */
+    font-family: 'Times New Roman', serif; 
+    letter-spacing: 2px;
+}
+.hero-content_o p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+.book-now {
+    display: inline-block;
+    background-color: var(--color-cta-button);
+    color: var(--color-secondary-text);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.book-now:hover {
+    background-color: #e57d4a;
+}
+/* --- 3. Features Section (Grid) --- */
+#features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 50px 5%;
+    text-align: center;
+}
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.feature-image-frame {
+    border: 5px solid var(--color-light-khaki);
+    padding: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+.feature-image-frame img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+.feature-icon {
+    margin: 15px 0;
+}
+.feature-icon svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--color-dark-slate);
+}
+.feature-item p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color-dark-slate);
+}
+/* --- 4. Promotional Block --- */
+#promo-block {
+    background-color: var(--color-light-khaki);
+    padding: 100px 5%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.promo-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    position: relative; /* Context for children */
+}
+.promo-image {
+    position: relative; /* Allows the image to overlap */
+    z-index: 2;
+    width: 50%; /* Image takes up half the width on large screens */
+    max-width: 520px;
+    transform: translateY(-50px); /* Lifts the image up over the section */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(.75em .75em .5em);
+}
+.promo-image img {
+    width: 95%;
+    height: auto;
+    display: block;
+}
+.promo-text-box {
+    background-color: var(--color-dark-slate);
+    color: var(--color-secondary-text);
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    width: 50%; /* Text box takes up half the width */
+    margin-left: -100px; /* Overlaps the image */
+    align-self: flex-end; /* Pushes the text box to the bottom right */
+    box-shadow: 20px 20px rgba(26, 83, 58, 0.2);
+    text-align: right;
+}
+.promo-text-box h2 {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.promo-text-box .join-us {
+    display: inline-block;
+    background-color: var(--color-light-khaki);
+    color: var(--color-dark-slate);
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
 
-/* --- 2. Hero Section --- */
-        #hero_o {
-            position: relative;
-            width: 97%;
-            height: 600px; /* Fixed height for visual consistency */
-            overflow: hidden;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        #hero_o img {
-            width: 98%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(80%); /* Darkens the image for better text contrast */
-        }
-
-        .hero-content_o {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: var(--color-secondary-text);
-            z-index: 10;
-        }
-
-        .hero-content_o h1 {
-            font-size: 4em;
-            margin: 0 0 10px 0;
-            /* Font style matching the image's script font is approximated */
-            font-family: 'Times New Roman', serif; 
-            letter-spacing: 2px;
-        }
-
-        .hero-content_o p {
-            font-size: 1.2em;
-            margin-bottom: 25px;
-        }
-
-        .book-now {
-            display: inline-block;
-            background-color: var(--color-cta-button);
-            color: var(--color-secondary-text);
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .book-now:hover {
-            background-color: #e57d4a;
-        }
-
-        /* --- 3. Features Section (Grid) --- */
-        #features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            padding: 50px 5%;
-            text-align: center;
-        }
-
-        .feature-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .feature-image-frame {
-            border: 5px solid var(--color-light-khaki);
-            padding: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 15px;
-        }
-        
-        .feature-image-frame img {
-            display: block;
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-        }
-
-        .feature-icon {
-            margin: 15px 0;
-        }
-        
-        .feature-icon svg {
-            width: 30px;
-            height: 30px;
-            fill: var(--color-dark-slate);
-        }
-
-        .feature-item p {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: var(--color-dark-slate);
-        }
-
-        /* --- 4. Promotional Block --- */
-        #promo-block {
-            background-color: var(--color-light-khaki);
-            padding: 100px 5%;
-            margin-top: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        
-        .promo-container {
-            width: 100%;
-            max-width: 1200px;
-            display: flex;
-            justify-content: space-between;
-            position: relative; /* Context for children */
-        }
-
-        .promo-image {
-            position: relative; /* Allows the image to overlap */
-            z-index: 2;
-            width: 50%; /* Image takes up half the width on large screens */
-            max-width: 520px;
-            transform: translateY(-50px); /* Lifts the image up over the section */
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            filter: drop-shadow(.75em .75em .5em);
-        }
-
-        .promo-image img {
-            width: 95%;
-            height: auto;
-            display: block;
-        }
-        
-        .promo-text-box {
-            background-color: var(--color-dark-slate);
-            color: var(--color-secondary-text);
-            padding: 40px;
-            position: relative;
-            z-index: 1;
-            width: 50%; /* Text box takes up half the width */
-            margin-left: -100px; /* Overlaps the image */
-            align-self: flex-end; /* Pushes the text box to the bottom right */
-            box-shadow: 20px 20px rgba(26, 83, 58, 0.2);
-            text-align: right;
-        }
-
-        .promo-text-box h2 {
-            font-size: 2em;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        
-        .promo-text-box .join-us {
-            display: inline-block;
-            background-color: var(--color-light-khaki);
-            color: var(--color-dark-slate);
-            padding: 8px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-        
-        .promo-text-box .join-us:hover {
-            background-color: #fff;
-        }
-
-        /* --- Responsiveness --- */
-        @media (max-width: 900px) {
-            #features {
-                grid-template-columns: 1fr; /* Stack features vertically */
-                gap: 50px;
-            }
-            
-            .hero-content h1 {
-                font-size: 3em;
-            }
-
-            .promo-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .promo-image, .promo-text-box {
-                width: 90%;
-                margin: 0;
-                transform: none;
-            }
-            
-            .promo-text-box {
-                text-align: left;
-                margin-top: -20px; /* Minor overlap */
-            }
-            
-            footer {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .footer-links, .social-media {
-                margin-top: 10px;
-            }
-        }
-
-   /* --- 5. Footer --- */
-        footer {
-            background-color: var(--color-dark-slate);
-            color: var(--color-secondary-text);
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.9em;
-        }
-
-        .footer-links a {
-            color: var(--color-secondary-text);
-            text-decoration: none;
-            margin-left: 20px;
-        }
-
-        .social-media img {
-            width: 25px;
-            height: 25px;
-            margin-left: 10px;
-        }
+.promo-text-box .join-us:hover {
+    background-color: #fff;
+}
+/* 5. Footer --- */
+footer {
+    background-color: var(--color-dark-slate);
+    color: var(--color-secondary-text);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+.footer-links a {
+    color: var(--color-secondary-text);
+    text-decoration: none;
+    margin-left: 20px;
+}
+.social-media img {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
